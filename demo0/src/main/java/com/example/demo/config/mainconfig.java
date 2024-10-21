@@ -29,7 +29,7 @@ public class mainconfig {
     public SecurityFilterChain configureHttpSecurity(HttpSecurity http) throws Exception {
         http.csrf(customizer->customizer.disable());
         http.authorizeHttpRequests(customizer->customizer.anyRequest().authenticated());
-        http.formLogin(Customizer.withDefaults());
+//        http.formLogin(Customizer.withDefaults());
         http.httpBasic(Customizer.withDefaults());
         return http.build();
     }
