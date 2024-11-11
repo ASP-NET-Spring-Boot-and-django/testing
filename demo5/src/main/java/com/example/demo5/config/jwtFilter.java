@@ -40,7 +40,7 @@ public class jwtFilter extends OncePerRequestFilter {
             }
         }
         if(id!=-1 && !jwtService.isTokenExpired(token) && SecurityContextHolder.getContext().getAuthentication() == null){
-            System.out.println(id);
+
             Optional<Chef> chef=chefrepo.findById(id);
 
             if(chef.isPresent()){

@@ -41,6 +41,7 @@ public class jwtService {
     }
     public boolean isTokenExpired(String token) {
         try {
+
             DecodedJWT decodedJWT = JWT.decode(token); // Decodes the token without validating it
 
             Date expirationDate = decodedJWT.getExpiresAt();
